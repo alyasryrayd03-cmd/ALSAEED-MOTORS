@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>معرض السعيد للدراجات النارية وقطع الغيار وبطاريات الليثيوم | تعز</title>
+  <meta name="description" content="معرض السعيد - مفرق الذكرة، تعز. جميع أنواع الدراجات النارية في اليمن، قطع غيار من الصدام للصدام، وبطاريات الليثيوم المطورة للبيوت والمؤسسات والمستشفيات والدراجات." />
+
+  <!-- خط عربي احترافي Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- أيقونات Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg-main: #09090b;
+      --bg-card: #131317;
+      --bg-elevated: #1b1b22;
+      --primary: #dc2626;
+      --primary-hover: #ef4444;
+      --primary-glow: rgba(220, 38, 38, 0.35);
+      --lithium: #06b6d4;
+      --lithium-glow: rgba(6, 182, 212, 0.3);
+      --silver: #cbd5e1;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.08);
+      --whatsapp: #22c55e;
+      --whatsapp-hover: #16a34a;
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ================= الشريط العلوي ================= */
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(9, 9, 11, 0.9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), #7f1d1d);
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      color: #fff;
+      box-shadow: 0 6px 20px var(--primary-glow);
+    }
+
+    .brand-text h1 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      font-size: 0.78rem;
+      color: var(--silver);
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--silver);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .inquiry-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .inquiry-btn:hover {
+      border-color: var(--primary);
+      background: rgba(220, 38, 38, 0.12);
+    }
+
+    .badge-count {
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      min-width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      padding: 0 6px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      font-size: 1.2rem;
+    }
+
+    /* ================= الواجهة الرئيسية Hero ================= */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      background:
+        linear-gradient(90deg, rgba(9, 9, 11, 0.96) 0%, rgba(9, 9, 11, 0.84) 55%, rgba(127, 29, 29, 0.35) 100%),
+        url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(220, 38, 38, 0.16);
+      border: 1px solid rgba(220, 38, 38, 0.45);
+      color: #fca5a5;
+      padding: 6px 15px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .hero-tag.lithium-tag {
+      background: rgba(6, 182, 212, 0.16);
+      border-color: rgba(6, 182, 212, 0.5);
+      color: #67e8f9;
+    }
+
+    .hero h2 {
+      font-size: clamp(2rem, 4.8vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 span {
+      background: linear-gradient(135deg, #ef4444, #f87171);
+      -webkit-background-cli: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.06rem;
+      color: var(--silver);
+      margin-bottom: 30px;
+      max-width: 650px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 42px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 24px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #991b1b);
+      color: #fff;
+      box-shadow: 0 8px 25px var(--primary-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, var(--primary-hover), var(--primary));
+    }
+
+    .btn-lithium {
+      background: linear-gradient(135deg, #06b6d4, #0e7490);
+      color: #fff;
+      box-shadow: 0 8px 25px var(--lithium-glow);
+    }
+
+    .btn-lithium:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: #052e16;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-hover);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      background: rgba(220, 38, 38, 0.12);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 620px;
+    }
+
+    .stat-box {
+      background: rgba(19, 19, 23, 0.85);
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+    }
+
+    .stat-box strong {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .stat-box span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ================= بنر بطاريات الليثيوم الشامل ================= */
+    .lithium-spotlight {
+      padding: 56px 0 10px;
+    }
+
+    .lithium-banner {
+      background: linear-gradient(135deg, #0b1924 0%, #111827 55%, #1f1115 100%);
+      border: 1px solid rgba(6, 182, 212, 0.45);
+      border-radius: 22px;
+      padding: 34px 32px;
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      align-items: center;
+      gap: 28px;
+      box-shadow: 0 20px 50px rgba(6, 182, 212, 0.12);
+    }
+
+    .lithium-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(6, 182, 212, 0.18);
+      border: 1px solid rgba(6, 182, 212, 0.5);
+      color: #67e8f9;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .lithium-banner h3 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 900;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .lithium-banner h3 span {
+      color: #22d3ee;
+    }
+
+    .lithium-banner p {
+      color: var(--silver);
+      font-size: 0.96rem;
+      margin-bottom: 20px;
+    }
+
+    .lithium-perks {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .perk-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .perk-item i {
+      color: #22d3ee;
+      font-size: 1rem;
+    }
+
+    .lithium-visual {
+      background: rgba(9, 9, 11, 0.65);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .lithium-icon-big {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 14px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+      display: grid;
+      place-items: center;
+      font-size: 2.2rem;
+      color: #fff;
+      box-shadow: 0 12px 30px var(--lithium-glow);
+    }
+
+    .lithium-sizes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .size-chip {
+      background: rgba(34, 211, 238, 0.14);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+      color: #67e8f9;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    /* ================= الأقسام العامة ================= */
+    section {
+      padding: 72px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 42px;
+    }
+
+    .section-header span {
+      color: var(--primary-hover);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .section-header h3 {
+      font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+      font-weight: 900;
+      margin: 8px 0 12px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+    }
+
+    /* ================= شريط البحث والفلترة ================= */
+    .controls-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 34px;
+    }
+
+    .search-box {
+      position: relative;
+      max-width: 560px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 14px 48px 14px 18px;
+      border-radius: 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: #fff;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.18);
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      padding: 9px 17px;
+      border-radius: 999px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--silver);
+      font-weight: 700;
+      font-size: 0.87rem;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 6px 18px var(--primary-glow);
+    }
+
+    .filter-btn.lithium-tab {
+      border-color: rgba(6, 182, 212, 0.45);
+      color: #67e8f9;
+    }
+
+    .filter-btn.lithium-tab:hover,
+    .filter-btn.lithium-tab.active {
+      background: var(--lithium);
+      border-color: var(--lithium);
+      color: #082f49;
+      box-shadow: 0 6px 18px var(--lithium-glow);
+    }
+
+    /* ================= شبكة المنتجات ================= */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+      gap: 22px;
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .product-card.lithium-card {
+      border-color: rgba(6, 182, 212, 0.35);
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(220, 38, 38, 0.5);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .product-card.lithium-card:hover {
+      border-color: var(--lithium);
+      box-shadow: 0 18px 40px rgba(6, 182, 212, 0.2);
+    }
+
+    .product-img-wrap {
+      position: relative;
+      height: 205px;
+      overflow: hidden;
+      background: #18181f;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.07);
+    }
+
+    .cat-pill {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(9, 9, 11, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #fff;
+      backdrop-filter: blur(6px);
+    }
+
+    .cat-pill.lithium-pill {
+      background: rgba(8, 51, 68, 0.92);
+      border-color: rgba(34, 211, 238, 0.5);
+      color: #67e8f9;
+    }
+
+    .price-pill {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: linear-gradient(135deg, var(--primary), #991b1b);
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .product-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-title {
+      font-size: 1.06rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .product-desc {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      flex: 1;
+    }
+
+    .specs-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+
+    .spec-chip {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      color: var(--silver);
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+    }
+
+    .btn-ask {
+      background: linear-gradient(135deg, var(--whatsapp), #15803d);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.86rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition: var(--transition);
+    }
+
+    .btn-ask:hover {
+      filter: brightness(1.08);
+    }
+
+    .btn-add-list {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: #fff;
+      width: 44px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .btn-add-list:hover {
+      border-color: var(--primary);
+      color: var(--primary-hover);
+    }
+
+    /* ================= قسم قطع الغيار من الصدام للصدام ================= */
+    .parts-master {
+      background: #0d0d11;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .parts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .part-group-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      transition: var(--transition);
+    }
+
+    .part-group-card:hover {
+      border-color: rgba(220, 38, 38, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .part-group-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .part-group-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(220, 38, 38, 0.14);
+      color: var(--primary-hover);
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .part-group-card h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .part-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+
+    .part-list li {
+      font-size: 0.87rem;
+      color: var(--silver);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .part-list li i {
+      color: var(--primary-hover);
+      font-size: 0.72rem;
+    }
+
+    /* ================= قسم التواصل والموقع ================= */
+    .contact-section {
+      background: linear-gradient(180deg, var(--bg-main), #111116);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .contact-card h4 {
+      font-size: 1.25rem;
+      font-weight: 900;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-card h4 i {
+      color: var(--primary-hover);
+    }
+
+    .phone-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .phone-number {
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      direction: ltr;
+    }
+
+    .phone-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .mini-btn {
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mini-call {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .mini-wa {
+      background: var(--whatsapp);
+      color: #052e16;
+    }
+
+    .address-box {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      padding: 18px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      color: var(--silver);
+      font-size: 0.95rem;
+    }
+
+    .address-box strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* ================= الفوتر وحقوق المطور ================= */
+    footer {
+      background: #060608;
+      border-top: 1px solid var(--border);
+      padding: 36px 0 26px;
+      text-align: center;
+    }
+
+    .footer-top {
+      margin-bottom: 18px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .dev-credit {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--bg-card);
+      border: 1px solid rgba(220, 38, 38, 0.35);
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--silver);
+    }
+
+    .dev-credit strong {
+      color: #fff;
+    }
+
+    .dev-phone {
+      color: #4ade80;
+      font-weight: 800;
+      direction: ltr;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dev-phone:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= النوافذ المنبثقة ================= */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 500px;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 24px;
+      animation: popIn 0.25s ease;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.94); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-header h4 {
+      font-size: 1.15rem;
+      font-weight: 900;
+    }
+
+    .close-modal {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--bg-elevated);
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+    }
+
+    .cart-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: var(--bg-elevated);
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .cart-item-title {
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .cart-item-cat {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .remove-item {
+      color: #f87171;
+      font-size: 1rem;
+      padding: 6px;
+    }
+
+    .wa-choice-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(90px);
+      background: #18181f;
+      border: 1px solid var(--primary);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      z-index: 3000;
+      opacity: 0;
+      transition: var(--transition);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        position: fixed;
+        top: 76px;
+        right: -100%;
+        width: 100%;
+        background: rgba(9, 9, 11, 0.98);
+        flex-direction: column;
+        padding: 26px 20px;
+        border-bottom: 1px solid var(--border);
+        transition: var(--transition);
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .lithium-banner {
+        grid-template-columns: 1fr;
+        padding: 24px 20px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .hero-stats,
+      .lithium-perks {
+        grid-template-columns: 1fr;
+      }
+      .inquiry-btn span.text-label {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= الهيدر ================= -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#home" class="brand">
+        <div class="brand-icon"><i class="fa-solid fa-motorcycle"></i></div>
+        <div class="brand-text">
+          <h1>معرض السعيد</h1>
+          <span>للدراجات النارية وقطع الغيار</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" onclick="closeMenu()">الرئيسية</a></li>
+        <li><a href="#lithium-section" onclick="closeMenu()">بطاريات الليثيوم</a></li>
+        <li><a href="#catalog" onclick="closeMenu()">الدراجات والمنتجات</a></li>
+        <li><a href="#bumper-to-bumper" onclick="closeMenu()">قطع الغيار الشاملة</a></li>
+        <li><a href="#contact" onclick="closeMenu()">تواصل معنا</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="inquiry-btn" onclick="openCartModal()">
+          <i class="fa-solid fa-clipboard-list"></i>
+          <span class="text-label">قائمة الاستفسار</span>
+          <span class="badge-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= الواجهة الرئيسية ================= -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tags-row">
+          <div class="hero-tag">
+            <i class="fa-solid fa-location-dot"></i>
+            اليمن - تعز - مفرق الذكرة - الشارع العام - مقابل سوق القات
+          </div>
+          <div class="hero-tag lithium-tag">
+            <i class="fa-solid fa-bolt"></i>
+            بطاريات ليثيوم: للبيوت، المؤسسات، المستشفيات، والدراجات
+          </div>
+        </div>
+
+        <h2>معرض السعيد: <span>دراجات نارية</span> وقطع غيار من الصدام للصدام</h2>
+        <p>
+          وجهتك الأولى في تعز واليمن لجميع أنواع الدراجات النارية العملية والجبلية (باجاج بوكسر، هوجن، دايون، ليفان، سي جي، وغيرها)، مع توفر <strong>كافة قطع الغيار الأصلية من الصدام للصدام</strong>، وجميع أحجام <strong>بطاريات الليثيوم المطورة</strong>.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#catalog" class="btn btn-primary">
+            <i class="fa-solid fa-motorcycle"></i> تصفح الدراجات والقطع
+          </a>
+          <button class="btn btn-whatsapp" onclick="openQuickAsk('استفسار عام عن الدراجات النارية وقطع الغيار وبطاريات الليثيوم')">
+            <i class="fa-brands fa-whatsapp"></i> استفسر عن السعر واتساب
+          </button>
+          <a href="tel:776696766" class="btn btn-outline">
+            <i class="fa-solid fa-phone"></i> اتصل الآن
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <strong>من الصدام للصدام</strong>
+            <span>جميع قطع غيار الدراجات</span>
+          </div>
+          <div class="stat-box">
+            <strong>بطاريات ليثيوم</strong>
+            <span>صغير • متوسط • كبير</span>
+          </div>
+          <div class="stat-box">
+            <strong>دراجات اليمن</strong>
+            <span>بوكسر • هوجن • دايون • ليفان</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= قسم خاص: بطاريات الليثيوم المطورة (كل الأحجام والاستخدامات) ================= -->
+  <section class="lithium-spotlight" id="lithium-section">
+    <div class="container">
+      <div class="lithium-banner">
+        <div>
+          <div class="lithium-badge">
+            <i class="fa-solid fa-car-battery"></i> متوفر بجميع الأحجام والمقاسات
+          </div>
+          <h3><span>بطاريات الليثيوم المطورة</span> لكل احتياجاتك في اليمن</h3>
+          <p>
+            سواء كنت تبحث عن بطارية لدراجتك النارية، أو لمنظومة الطاقة الشمسية في <strong>بيتك</strong>، أو لتشغيل <strong>مؤسسة أو محل تجاري أو مستشفى ومركز طبي</strong>؛ نوفر لك جميع أنواع وأحجام بطاريات الليثيوم المطورة (صغير، متوسط، كبير) بأعلى كفاءة وعمر افتراضي طويل.
+          </p>
+          <div class="lithium-perks">
+            <div class="perk-item"><i class="fa-solid fa-house"></i> بطاريات ليثيوم للبيوت والطاقة الشمسية</div>
+            <div class="perk-item"><i class="fa-solid fa-hospital"></i> بطاريات كبيرة للمستشفيات والمؤسسات</div>
+            <div class="perk-item"><i class="fa-solid fa-motorcycle"></i> بطاريات ليثيوم لجميع الدراجات النارية</div>
+            <div class="perk-item"><i class="fa-solid fa-bolt"></i> شحن سريع جداً وعمر أطول بـ 3 أضعاف</div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <button class="btn btn-lithium" onclick="openQuickAsk('الاستفسار عن أسعار وأحجام بطاريات الليثيوم المطورة (صغير / متوسط / كبير)')">
+              <i class="fa-brands fa-whatsapp"></i> استفسر عن سعر بطاريات الليثيوم
+            </button>
+            <button class="btn btn-outline" onclick="jumpToCategory('lithium')">
+              <i class="fa-solid fa-eye"></i> عرض قسم البطاريات
+            </button>
+          </div>
+        </div>
+
+        <div class="lithium-visual">
+          <div class="lithium-icon-big">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h4>كل الأحجام متوفرة (LiFePO4)</h4>
+          <p style="font-size: 0.87rem; color: var(--text-muted); margin-top: 6px;">
+            مزودة بنظام حماية ذكي (BMS) يتحمل ظروف العمل الشاقة والانقطاعات المستمرة للكهرباء في اليمن.
+          </p>
+          <div class="lithium-sizes">
+            <span class="size-chip">حجم صغير (دراجات)</span>
+            <span class="size-chip">حجم متوسط (بيوت)</span>
+            <span class="size-chip">حجم كبير (مؤسسات ومستشفيات)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= الكتالوج الشامل ================= -->
+  <section id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <span>الكتالوج الشامل</span>
+        <h3>دراجات السوق اليمني، بطاريات الليثيوم، وقطع الغيار</h3>
+        <p>تصفح الأقسام واضغط <strong>"استفسر عن السعر"</strong> للتواصل المباشر عبر أرقام المعرض، أو أضف أكثر من منتج لقائمة الاستفسار.</p>
+      </div>
+
+      <div class="controls-bar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="ابحث: باجاج بوكسر، هوجن، دايون، ليثيوم، كربريتر، ضفيرة، مكينة..." oninput="renderProducts()" />
+        </div>
+
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-btn active" data-cat="all" onclick="setCategory('all', this)">الكل</button>
+          <button class="filter-btn" data-cat="yemen-bikes" onclick="setCategory('yemen-bikes', this)">دراجات نارية (اليمن)</button>
+          <button class="filter-btn lithium-tab" data-cat="lithium" onclick="setCategory('lithium', this)">⚡ بطاريات الليثيوم (صغير/متوسط/كبير)</button>
+          <button class="filter-btn" data-cat="parts" onclick="setCategory('parts', this)">قطع غيار من الصدام للصدام</button>
+          <button class="filter-btn" data-cat="oils" onclick="setCategory('oils', this)">الزيوت والإطارات</button>
+          <button class="filter-btn" data-cat="gear" onclick="setCategory('gear', this)">الإكسسوارات ومعدات الحماية</button>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= قسم قطع الغيار الشامل (من الصدام للصدام) ================= -->
+  <section class="parts-master" id="bumper-to-bumper">
+    <div class="container">
+      <div class="section-header">
+        <span>كل مسمار وقطعة متوفرة لدينا</span>
+        <h3>جميع قطع غيار الدراجات النارية من الصدام للصدام</h3>
+        <p>نوفر قطع الغيار الأصلية والتجارية الممتازة لجميع الدراجات النارية المنتشرة في اليمن (بوكسر، هوجن، دايون، ليفان، سي جي، سونيك، دبابات جبلية، وسكوتر).</p>
+      </div>
+
+      <div class="parts-grid">
+        <div class="part-group-card">
+          <div class="part-group-head">
+            <div class="part-group-icon"><i class="fa-solid fa-gears"></i></div>
+            <h4>قطع المكينة والتوضيب</h4>
+          </div>
+          <ul class="part-list">
+            <li><i class="fa-solid fa-check"></i> سلندر، بستم، وشنابر أصلية</li>
+            <li><i class="fa-solid fa-check"></i> كرنك، رمانات، وصبابات</li>
+            <li><i class="fa-solid fa-check"></i> طقم كلتش (ديسك وصحن كلتش)</li>
+            <li><i class="fa-solid fa-check"></i> تروس الجيربوكس وطقم وجيه كامل</li>
+          </ul>
+          <button class="btn-ask" style="width: 100%;" onclick="openQuickAsk('استفسار عن قطع المكينة والتوضيب للدراجات النارية')">
+            <i class="fa-brands fa-whatsapp"></i> اسأل عن القطعة
+          </button>
+        </div>
+
+        <div class="part-group-card">
+          <div class="part-group-head">
+            <div class="part-group-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h4>الكهرباء والضفيرة</h4>
+          </div>
+          <ul class="part-list">
+            <li><i class="fa-solid fa-check"></i> ضفيرة كهرباء كاملة ومفاتيح سويتش</li>
+            <li><i class="fa-solid fa-check"></i> سلف، دينمو، بوبينة، وكويل شرارة</li>
+            <li><i class="fa-solid fa-check"></i> كتاوت شحن، بواجي أصلية، وعدادات</li>
+            <li><i class="fa-solid fa-check"></i> شمعات أمامية LED وإشارات خلفية</li>
+          </ul>
+          <button class="btn-ask" style="width: 100%;" onclick="openQuickAsk('استفسار عن قطع الكهرباء والضفيرة للدراجات النارية')">
+            <i class="fa-brands fa-whatsapp"></i> اسأل عن القطعة
+          </button>
+        </div>
+
+        <div class="part-group-card">
+          <div class="part-group-head">
+            <div class="part-group-icon"><i class="fa-solid fa-wrench"></i></div>
+            <h4>التغذية، العادم والتروس</h4>
+          </div>
+          <ul class="part-list">
+            <li><i class="fa-solid fa-check"></i> كربريتر أصلي وليات بنزين</li>
+            <li><i class="fa-solid fa-check"></i> شكمان (عازل) كامل وجوانات</li>
+            <li><i class="fa-solid fa-check"></i> طقم تروس أمامي وخلفي وجنزير مقوّى</li>
+            <li><i class="fa-solid fa-check"></i> فلاتر هواء وفلاتر زيت وبنزين</li>
+          </ul>
+          <button class="btn-ask" style="width: 100%;" onclick="openQuickAsk('استفسار عن الكربريتر والشكمان وطقم التروس والجنازير')">
+            <i class="fa-brands fa-whatsapp"></i> اسأل عن القطعة
+          </button>
+        </div>
+
+        <div class="part-group-card">
+          <div class="part-group-head">
+            <div class="part-group-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>الهيكل، المساعدات والفرامل</h4>
+          </div>
+          <ul class="part-list">
+            <li><i class="fa-solid fa-check"></i> مساعدات أمامية وخلفية ومقصات</li>
+            <li><i class="fa-solid fa-check"></i> فحمات فرامل، هوبات ديسك، وباكم</li>
+            <li><i class="fa-solid fa-check"></i> تانكي بنزين، رفارف، مقاعد، وصدامات</li>
+            <li><i class="fa-solid fa-check"></i> جنوط، كفرات (تواير)، وتيوبيات جميع المقاسات</li>
+          </ul>
+          <button class="btn-ask" style="width: 100%;" onclick="openQuickAsk('استفسار عن قطع الهيكل والمساعدات والفرامل والجنوط')">
+            <i class="fa-brands fa-whatsapp"></i> اسأل عن القطعة
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= التواصل والموقع ================= -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span>للاستفسار عن الأسعار والطلب</span>
+        <h3>تواصل مباشرة مع معرض السعيد</h3>
+        <p>للاستفسار عن سعر أي دراجة نارية أو قطعة غيار أو بطارية ليثيوم، تواصل معنا بالاتصال المباشر أو عبر واتساب:</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h4><i class="fa-solid fa-headset"></i> أرقام المعرض للاستفسار</h4>
+
+          <div class="phone-item">
+            <span class="phone-number">776 696 766</span>
+            <div class="phone-actions">
+              <a href="tel:776696766" class="mini-btn mini-call"><i class="fa-solid fa-phone"></i> اتصال</a>
+              <a href="https://wa.me/967776696766?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%B3%D8%B9%D9%8A%D8%AF" target="_blank" class="mini-btn mini-wa"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
+            </div>
+          </div>
+
+          <div class="phone-item">
+            <span class="phone-number">738 255 303</span>
+            <div class="phone-actions">
+              <a href="tel:738255303" class="mini-btn mini-call"><i class="fa-solid fa-phone"></i> اتصال</a>
+              <a href="https://wa.me/967738255303?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D9%81%D9%8A%20%D9%85%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%B3%D8%B9%D9%8A%D8%AF" target="_blank" class="mini-btn mini-wa"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h4><i class="fa-solid fa-map-location-dot"></i> موقع المعرض</h4>
+          <div class="address-box">
+            <strong>العنوان الكامل:</strong>
+            مفرق الذكرة - الشارع العام - محافظة تعز - مقابل سوق القات
+          </div>
+          <div class="address-box" style="margin-bottom: 0;">
+            <strong>ملاحظة حول الأسعار:</strong>
+            الأسعار تتحدث يومياً حسب السوق والموديل؛ تواصل معنا عبر الأرقام أعلاه للحصول على أفضل سعر فوري.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= الفوتر وتوقيع المطور ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        © <span id="year"></span> <strong>معرض السعيد للدراجات النارية وقطع الغيار</strong> - تعز، اليمن. جميع الحقوق محفوظة.
+      </div>
+      <div class="dev-credit">
+        <span><i class="fa-solid fa-code" style="color: var(--primary-hover);"></i> تصميم وتطوير: <strong>رائد الياسري</strong></span>
+        <span>|</span>
+        <a href="https://wa.me/967735881072" target="_blank" class="dev-phone">
+          <i class="fa-brands fa-whatsapp"></i> 735881072
+        </a>
+        <a href="tel:735881072" style="color: var(--silver); font-size: 0.85rem;">
+          <i class="fa-solid fa-phone"></i> اتصال
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= نافذة اختيار رقم الاستفسار السريع ================= -->
+  <div class="modal-backdrop" id="askModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h4>استفسار عن السعر</h4>
+        <button class="close-modal" onclick="closeModal('askModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <p style="color: var(--silver); font-size: 0.94rem; margin-bottom: 12px;">
+        المنتج المختار: <strong id="askItemName" style="color: #fff;"></strong>
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.85rem;">
+        اختر الرقم الذي تفضل التواصل معه عبر واتساب أو الاتصال المباشر:
+      </p>
+      <div class="wa-choice-grid" id="askButtons"></div>
+    </div>
+  </div>
+
+  <!-- ================= نافذة قائمة الاستفسار (السلة) ================= -->
+  <div class="modal-backdrop" id="cartModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h4>قائمة الاستفسار عن الأسعار</h4>
+        <button class="close-modal" onclick="closeModal('cartModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="cartContainer"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ================= أرقام معرض السعيد =================
+    const STORE_PHONES = [
+      { display: '776696766', wa: '967776696766' },
+      { display: '738255303', wa: '967738255303' }
+    ];
+
+    // ================= قائمة المنتجات المخصصة للسوق اليمني =================
+    const products = [
+      // === 1. دراجات نارية (السوق اليمني) ===
+      {
+        id: 1,
+        name: 'دراجة باجاج بوكسر (Bajaj Boxer 150 / 125)',
+        category: 'yemen-bikes',
+        categoryLabel: 'دراجات اليمن',
+        desc: 'الأكثر طلباً وتحملاً في اليمن؛ قوية في الطلوع والطرق الجبلية، اقتصادية جداً في البترول، وقطع غيارها متوفرة بالكامل.',
+        specs: ['تحمل شاق', 'اقتصادية بالبترول', 'قوية بالطلوع'],
+        img: 'https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 2,
+        name: 'دراجة هوجن (Haojue / Haojin 150 - 200)',
+        category: 'yemen-bikes',
+        categoryLabel: 'دراجات اليمن',
+        desc: 'دراجة عملية ومريحة للشغل اليومي والمشاوير الطويلة، ثبات ممتاز ومكينة قوية تعيش لسنوات.',
+        specs: ['150cc - 200cc', 'شغل يومي', 'قطع غيار متوفرة'],
+        img: 'https://images.unsplash.com/photo-1558980664-769d59546b3d?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 3,
+        name: 'دراجة دايون وليفان (Dayun / Lifan CG 150)',
+        category: 'yemen-bikes',
+        categoryLabel: 'دراجات اليمن',
+        desc: 'خيار ممتاز للعمل والتوصيل والاستخدام اليومي، صيانة سهلة واقتصادية للغاية في الاستهلاك.',
+        specs: ['CG 150 / 200', 'صيانة سهلة', 'سعر اقتصادي'],
+        img: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 4,
+        name: 'دراجات جبلية وصحراوية (طرق وعرة)',
+        category: 'yemen-bikes',
+        categoryLabel: 'دراجات اليمن',
+        desc: 'مخصصة للطرق الجبلية والريفية الوعرة في تعز واليمن، بارتفاع مناسب ومساعدات طويلة وقوة عزم عالية.',
+        specs: ['طرق جبلية', 'مساعدات طويلة', 'عزم قوي'],
+        img: 'https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 5,
+        name: 'سكوتر أوتوماتيك للمدينة',
+        category: 'yemen-bikes',
+        categoryLabel: 'دراجات اليمن',
+        desc: 'قيادة سهلة ومريحة داخل المدينة بدون تعشيق، مع مساحة تخزين عملية واستهلاك منخفض للوقود.',
+        specs: ['أوتوماتيك', 'مريح للمدينة', 'اقتصادي'],
+        img: 'https://images.unsplash.com/photo-1519750292352-c9fc17322ed7?auto=format&fit=crop&w=800&q=80'
+      },
+
+      // === 2. بطاريات الليثيوم المطورة (صغير - متوسط - كبير) ===
+      {
+        id: 101,
+        name: 'بطاريات ليثيوم مطورة (حجم صغير) للدراجات النارية',
+        category: 'lithium',
+        categoryLabel: '⚡ ليثيوم - صغير',
+        desc: 'بطاريات ليثيوم 12V خفيفة الوزن بقدرة تشغيل فورية وعمر افتراضي طويل لجميع أنواع الدراجات النارية.',
+        specs: ['لجميع الدراجات', 'تشغيل فوري', 'شحن سريع'],
+        img: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 102,
+        name: 'بطاريات ليثيوم مطورة (حجم متوسط) للبيوت والمنازل',
+        category: 'lithium',
+        categoryLabel: '⚡ ليثيوم - متوسط',
+        desc: 'مثالية لمنظومات الطاقة الشمسية المنزلية، توفر كهرباء مستقرة طوال الليل وتتحمل التفريغ العميق والشحن السريع.',
+        specs: ['للبيوت والمنازل', 'طاقة شمسية', 'نظام حماية BMS'],
+        img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 103,
+        name: 'بطاريات ليثيوم مطورة (حجم كبير) للمؤسسات والمستشفيات',
+        category: 'lithium',
+        categoryLabel: '⚡ ليثيوم - كبير',
+        desc: 'بطاريات عالية السعة مخصصة للمستشفيات، المراكز الطبية، المؤسسات، والشركات لضمان استمرار الطاقة دون انقطاع.',
+        specs: ['مستشفيات ومؤسسات', 'سعات ضخمة', 'عمر طويل جداً'],
+        img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80'
+      },
+
+      // === 3. قطع غيار من الصدام للصدام ===
+      {
+        id: 201,
+        name: 'قطع المكينة والتوضيب الكامل (بستم، سلندر، كرنك، كلتش)',
+        category: 'parts',
+        categoryLabel: 'قطع غيار',
+        desc: 'جميع قطع توضيب المكينة الأصلية والتجارية الممتازة للبوكسر، الهوجن، الدايون، الليفان، وكل الدراجات.',
+        specs: ['سلندر وبستم', 'طقم كلتش', 'كرنك وصبابات'],
+        img: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 202,
+        name: 'قطع الكهرباء والضفيرة (ضفيرة، سلف، دينمو، كويل، بواجي)',
+        category: 'parts',
+        categoryLabel: 'قطع غيار',
+        desc: 'ضفائر كاملة، مفاتيح سويتش، سلفات، دينموهات، كتاوت شحن، عدادات، وشمعات LED قوية.',
+        specs: ['ضفيرة كاملة', 'سلف ودينمو', 'بواجي وكويلات'],
+        img: 'https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 203,
+        name: 'الكربريتر، الشكمان، وطقم التروس والجنازير',
+        category: 'parts',
+        categoryLabel: 'قطع غيار',
+        desc: 'كربريترات أصلية، شكمانات، أطقم تروس أمامي وخلفي مع جنازير فولاذية مقوّاة وفلاتر هواء وبنزين.',
+        specs: ['كربريتر أصلي', 'طقم تروس وجنزير', 'شكمانات'],
+        img: 'https://images.unsplash.com/photo-1558981359-219d6364c9c8?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 204,
+        name: 'قطع الهيكل، المساعدات، الفرامل، والجنوط',
+        category: 'parts',
+        categoryLabel: 'قطع غيار',
+        desc: 'تانكي بنزين، رفارف، مقاعد، صدامات حماية، مساعدات أمامية وخلفية، فحمات فرامل، وجنوط لجميع الموديلات.',
+        specs: ['من الصدام للصدام', 'مساعدات وفرامل', 'بدي وهياكل'],
+        img: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80'
+      },
+
+      // === 4. الزيوت والإطارات ===
+      {
+        id: 301,
+        name: 'زيوت محركات أصلية 4T وفلاتر',
+        category: 'oils',
+        categoryLabel: 'زيوت وفلاتر',
+        desc: 'أفضل أنواع الزيوت الأصلية المناسبة لأجواء اليمن والمحافظة على حرارة وعزم المحرك.',
+        specs: ['حماية للمكينة', 'تخليقي ومعدني', 'أصلي 100%'],
+        img: 'https://images.unsplash.com/photo-1635784063388-1ff609731d7d?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 302,
+        name: 'إطارات (تواير) وتيوبيات جميع المقاسات',
+        category: 'oils',
+        categoryLabel: 'إطارات وتواير',
+        desc: 'إطارات جبلية وعادية وتيوبلس شديدة التحمل للطرق الوعرة والأسفلت بجميع المقاسات.',
+        specs: ['تيوبلس وعادي', 'نقشة جبلية', 'جميع المقاسات'],
+        img: 'https://images.unsplash.com/photo-1580274455191-1c62238fa333?auto=format&fit=crop&w=800&q=80'
+      },
+
+      // === 5. الإكسسوارات ومعدات الحماية ===
+      {
+        id: 401,
+        name: 'خوذات أمان، أقفال ضد السرقة، وإكسسوارات زينة',
+        category: 'gear',
+        categoryLabel: 'مستلزمات وزينة',
+        desc: 'خوذات، قفازات، أقفال ديسك وجنازير قوية، مرايات، حوامل جوال، وكشافات LED للقيادة الليلية.',
+        specs: ['أمان وحماية', 'كشافات LED', 'أقفال قوية'],
+        img: 'https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&w=800&q=80'
+      }
+    ];
+
+    let activeCategory = 'all';
+    let inquiryCart = [];
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function setCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderProducts();
+    }
+
+    function jumpToCategory(cat) {
+      const btn = document.querySelector(`.filter-btn[data-cat="${cat}"]`);
+      setCategory(cat, btn);
+      document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('productsGrid');
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+
+      const filtered = products.filter(p => {
+        const matchCat = activeCategory === 'all' || p.category === activeCategory;
+        const matchText =
+          p.name.toLowerCase().includes(query) ||
+          p.desc.toLowerCase().includes(query) ||
+          p.categoryLabel.toLowerCase().includes(query);
+        return matchCat && matchText;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 48px 20px; background: var(--bg-card); border-radius: 16px; border: 1px solid var(--border);">
+            <i class="fa-solid fa-magnifying-glass" style="font-size: 2rem; color: var(--primary-hover); margin-bottom: 12px;"></i>
+            <h4 style="margin-bottom: 8px;">القطعة أو المنتج متوفر لدينا داخل المعرض!</h4>
+            <p style="color: var(--text-muted); margin-bottom: 18px;">اسألنا عنه مباشرة عبر واتساب وسنرد عليك فوراً بالسعر.</p>
+            <button class="btn btn-whatsapp" onclick="openQuickAsk('استفسار عن: ${query.replace(/'/g, '')}')">
+              <i class="fa-brands fa-whatsapp"></i> اسأل المعرض عنه الآن
+            </button>
+          </div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => {
+        const isLithium = p.category === 'lithium';
+        return `
+        <article class="product-card ${isLithium ? 'lithium-card' : ''}">
+          <div class="product-img-wrap">
+            <img src="${p.img}" alt="${p.name}" loading="lazy"
+                 onerror="this.src='https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80'" />
+            <span class="cat-pill ${isLithium ? 'lithium-pill' : ''}">${p.categoryLabel}</span>
+           <span class="price-pill"><i class="fa-solid fa-tag"></i> السعر عند الاستفسار</span>
+          </div>
+          <div class="product-body">
+            <h4 class="product-title">${p.name}</h4>
+            <p class="product-desc">${p.desc}</p>
+            <div class="specs-row">
+              ${p.specs.map(s => `<span class="spec-chip">${s}</span>`).join('')}
+            </div>
+            <div class="card-actions">
+              <button class="btn-ask" onclick="openQuickAsk('${p.name.replace(/'/g, "\\'")}')">
+                <i class="fa-brands fa-whatsapp"></i> استفسر عن السعر
+              </button>
+              <button class="btn-add-list" title="إضافة لقائمة الاستفسار" onclick="addToCart(${p.id})">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+      `}).join('');
+    }
+
+    function openQuickAsk(itemName) {
+      document.getElementById('askItemName').textContent = itemName;
+      const msg = encodeURIComponent(`السلام عليكم معرض السعيد، أرغب في الاستفسار عن سعر وتوفر:\n• ${itemName}`);
+      document.getElementById('askButtons').innerHTML = STORE_PHONES.map(phone => `
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: 8px;">
+          <a href="https://wa.me/${phone.wa}?text=${msg}" target="_blank" class="btn btn-whatsapp" style="padding: 11px 16px;">
+            <i class="fa-brands fa-whatsapp"></i> واتساب (${phone.display})
+          </a>
+          <a href="tel:${phone.display}" class="btn btn-outline" style="padding: 11px 14px;" title="اتصال مباشر">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+      `).join('');
+      document.getElementById('askModal').classList.add('open');
+    }
+
+    function addToCart(id) {
+      const item = products.find(p => p.id === id);
+      if (!item) return;
+      if (!inquiryCart.some(c => c.id === id)) {
+        inquiryCart.push(item);
+        updateCartCount();
+        showToast('تمت الإضافة إلى قائمة الاستفسار');
+      } else {
+        showToast('المنتج موجود بالفعل في قائمة الاستفسار');
+      }
+    }
+
+    function removeFromCart(id) {
+      inquiryCart = inquiryCart.filter(c => c.id !== id);
+      updateCartCount();
+      renderCartModal();
+    }
+
+    function updateCartCount() {
+      document.getElementById('cartCount').textContent = inquiryCart.length;
+    }
+
+    function openCartModal() {
+      renderCartModal();
+      document.getElementById('cartModal').classList.add('open');
+    }
+
+    function renderCartModal() {
+      const container = document.getElementById('cartContainer');
+      if (inquiryCart.length === 0) {
+        container.innerHTML = `
+          <div style="text-align:center; padding: 26px 10px; color: var(--text-muted);">
+            <i class="fa-solid fa-clipboard-list" style="font-size: 2.2rem; margin-bottom: 10px; color: var(--primary-hover);"></i>
+            <p>قائمة الاستفسار فارغة حالياً.</p>
+            <p style="font-size: 0.84rem; margin-top: 6px;">اضغط على علامة (+) بجانب أي دراجة أو بطارية أو قطعة لإضافتها هنا والسؤال عن أسعارها دفعة واحدة.</p>
+          </div>`;
+        return;
+      }
+
+      const itemsText = inquiryCart.map((c, idx) => `${idx + 1}. ${c.name}`).join('\n');
+      const waMsg = encodeURIComponent(`السلام عليكم معرض السعيد، أرغب في الاستفسار عن أسعار وتوفر المنتجات التالية:\n${itemsText}`);
+
+      container.innerHTML = `
+        <div class="cart-list">
+          ${inquiryCart.map(item => `
+            <div class="cart-item">
+              <div>
+                <div class="cart-item-title">${item.name}</div>
+                <div class="cart-item-cat">${item.categoryLabel}</div>
+              </div>
+              <button class="remove-item" onclick="removeFromCart(${item.id})" title="حذف">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          `).join('')}
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+          أرسل القائمة كاملة للاستفسار عن الأسعار عبر واتساب:
+        </p>
+        <div class="wa-choice-grid">
+          ${STORE_PHONES.map(phone => `
+            <a href="https://wa.me/${phone.wa}?text=${waMsg}" target="_blank" class="btn btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> إرسال للرقم ${phone.display}
+            </a>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+    }
+
+    window.addEventListener('click', (e) => {
+      if (e.target.classList.contains('modal-backdrop')) {
+        e.target.classList.remove('open');
+      }
+    });
+
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('navLinks').classList.remove('active');
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      toast.textContent = text;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    renderProducts();
+  </script>
+</body>
+</html>
